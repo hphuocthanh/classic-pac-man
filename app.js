@@ -244,7 +244,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function checkGameWin() {
-    if (score === 273) {
+    if (score >= 273) {
       score_element.textContent = "You win. Congrats!";
       ghosts.forEach((ghost) => clearInterval(ghost.timerId));
       document.removeEventListener("keyup", movePacman);
@@ -264,12 +264,14 @@ window.addEventListener("DOMContentLoaded", () => {
       unScareGhost()
       ghost.currentIndex = ghost.startIndex;
       squares[ghost.currentIndex].classList.add(ghost.className, "ghost");
+      moveGhost(ghost)
     });
     squares[currentPacmanIndex].classList.remove("pac-man");
     currentPacmanIndex = 489;
     squares[currentPacmanIndex].classList.add("pac-man");
     score = 0;
     score_element.textContent = score;
+    document.addEventListener("keyup", movePacman);
   }
 
   document.getElementById("replay").addEventListener("click", resetGame);
