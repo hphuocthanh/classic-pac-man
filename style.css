@@ -1,15 +1,84 @@
+
 body {
     background-color: #e2e2e2;
     text-align: center;
 }
 
-.pac-man {
-    background-color: yellow;
-    border: none;
+
+.grid {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    border: solid black;
+    width: 420px;
+    height: 420px;
+    background-color: #fff;
+
+}
+
+.grid div {
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
 }
 
 .pac-dot {
     background-color: green;
     border: 5px solid white;
-    border-radius: 0 5px;
+}
+
+.power-pellet {
+    background-color: green;
+    border-radius: 10px;
+}
+
+.ghost-lair {
+    background-color: #a8a8a8;
+    border: none;
+}
+.wall {
+    background-color: royalblue;
+    border: none;
+}
+.andy {
+    background-color: orange;
+    border: none;
+}
+
+.cheese {
+    background-color: rgb(162, 80, 255);
+    border: none;
+}
+
+.chan {
+    background-color: rgb(148, 59, 44);
+    border: none;
+}
+.fore {
+    background-color: rgb(218, 31, 177);
+    border: none;
+}
+
+.scared-ghost {
+    background-color: rgb(39, 211, 188);
+    border: none;
+}
+
+.pac-man {
+    background-color: #ffc140;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 1em;
+    border: solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2em;
+}
+
+.replay-btn {
+    background-color: royalblue;
+    color: #fff;
 }
